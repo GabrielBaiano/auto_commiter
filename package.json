@@ -74,6 +74,27 @@
           "type": "number",
           "default": 10000,
           "description": "Maximum length of diff to send to AI (characters)"
+        },
+        "aiCommit.language": {
+          "type": "string",
+          "enum": [
+            "pt",
+            "en",
+            "es",
+            "fr",
+            "de",
+            "it"
+          ],
+          "default": "pt",
+          "enumDescriptions": [
+            "Portuguese",
+            "English",
+            "Spanish",
+            "French",
+            "German",
+            "Italian"
+          ],
+          "description": "Language for commit messages"
         }
       }
     },

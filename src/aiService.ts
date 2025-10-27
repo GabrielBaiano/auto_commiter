@@ -37,8 +37,8 @@ export class AIService {
     }
   }
 
-  async generateCommitMessage(diff: string, fileNames: string[], branchName: string, useConventionalCommits: boolean): Promise<string> {
-    const prompt = this.buildPrompt(diff, fileNames, branchName, useConventionalCommits);
+  async generateCommitMessage(diff: string, fileNames: string[], branchName: string, useConventionalCommits: boolean, language: string): Promise<string> {
+    const prompt = this.buildPrompt(diff, fileNames, branchName, useConventionalCommits, language);
     
     switch (this.provider) {
       case 'openai':
@@ -52,13 +52,26 @@ export class AIService {
     }
   }
 
-  private buildPrompt(diff: string, fileNames: string[], branchName: string, useConventionalCommits: boolean): string {
+  private buildPrompt(diff: string, fileNames: string[], branchName: string, useConventionalCommits: boolean, language: string): string {
     const maxLength = Config.getMaxDiffLength();
     const truncatedDiff = diff.length > maxLength 
       ? diff.substring(0, maxLength) + '\n\n... (diff truncated)'
       : diff;
 
+    const languageNames: { [key: string]: string } = {
+      'pt': 'Portuguese (pt-BR)',
+      'en': 'English',
+      'es': 'Spanish',
+      'fr': 'French',
+      'de': 'German',
+      'it': 'Italian'
+    };
+
+    const langName = languageNames[language] || 'Portuguese';
+
     let prompt = `You are an expert at writing git commit messages.
+
+IMPORTANT: Write the commit message in ${langName}.
 
 Rules:
 - Write in ${useConventionalCommits ? 'Conventional Commits format (e.g., feat:, fix:, chore:, docs:, refactor:, test:)' : 'a clear and concise format'}
@@ -77,7 +90,7 @@ Git diff:
 ${truncatedDiff}
 \`\`\`
 
-Generate a commit message for these changes. Only return the commit message text, nothing else.`;
+Generate a commit message for these changes in ${langName}. Only return the commit message text, nothing else.`;
 
     return prompt;
   }

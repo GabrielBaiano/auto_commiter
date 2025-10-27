@@ -152,11 +152,13 @@ async function handleGenerateCommand() {
         outputChannel.appendLine(`Model: ${Config.getModel()}`);
         outputChannel.appendLine(`Files changed: ${fileNames.length}`);
         
+        const language = Config.getLanguage();
         const commitMessage = await aiService.generateCommitMessage(
           changeInfo.diff,
           fileNames,
           changeInfo.branchName,
-          useConventionalCommits
+          useConventionalCommits,
+          language
         );
 
         progress.report({ increment: 100, message: 'Done!' });
@@ -173,15 +175,34 @@ async function handleGenerateCommand() {
           await git.stageAll();
         }
 
-        // Simply show the message and ask to commit
-        const finalConfirm = await vscode.window.showInformationMessage(
-          `AI Generated Commit:\n\n${commitMessage}\n\nCommit with this message?`,
-          'Yes', 'No'
+        // Show editable message
+        const editedMessage = await vscode.window.showInputBox({
+          value: commitMessage,
+          prompt: 'AI generated commit message. Edit if needed:',
+          ignoreFocusOut: true,
+          validateInput: (value) => {
+            if (!value || value.trim().length === 0) {
+              return 'Commit message cannot be empty';
+            }
+            return null;
+          }
+        });
+
+        if (!editedMessage) {
+          return;
+        }
+
+        // Ask for confirmation
+        const finalConfirm = await vscode.window.showQuickPick(
+          ['Y - Commit now', 'N - Cancel'],
+          {
+            placeHolder: 'Commit with this message?'
+          }
         );
 
-        if (finalConfirm === 'Yes') {
-          await git.commit(commitMessage);
-          vscode.window.showInformationMessage(`✅ Commit created: ${commitMessage}`);
+        if (finalConfirm && finalConfirm.includes('Y')) {
+          await git.commit(editedMessage);
+          vscode.window.showInformationMessage(`✅ Commit created: ${editedMessage}`);
         }
       }
     );

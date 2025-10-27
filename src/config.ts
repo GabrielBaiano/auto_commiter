@@ -79,6 +79,11 @@ export class Config {
     return config.get<number>('maxDiffLength', 10000);
   }
 
+  static getLanguage(): string {
+    const config = vscode.workspace.getConfiguration('aiCommit');
+    return config.get<string>('language', 'pt');
+  }
+
   static async promptForApiKey(): Promise<string | undefined> {
     const provider = this.getProvider();
     const providerName = provider === 'openai' ? 'OpenAI' : 
