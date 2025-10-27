@@ -1,0 +1,111 @@
+{
+  "name": "ai-commit",
+  "displayName": "AI Commit Generator",
+  "description": "Generate conventional commit messages with AI using OpenAI, Claude, or Gemini",
+  "version": "0.1.0",
+  "publisher": "yourname",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other",
+    "Machine Learning"
+  ],
+  "keywords": [
+    "git",
+    "commit",
+    "ai",
+    "openai",
+    "claude",
+    "gemini",
+    "conventional-commits"
+  ],
+  "activationEvents": [
+    "onCommand:aiCommit.generate"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiCommit.generate",
+        "title": "Generate Commit Message with AI",
+        "category": "AI Commit"
+      },
+      {
+        "command": "aiCommit.configure",
+        "title": "Configure AI Commit",
+        "category": "AI Commit"
+      }
+    ],
+    "configuration": {
+      "title": "AI Commit",
+      "properties": {
+        "aiCommit.provider": {
+          "type": "string",
+          "enum": [
+            "openai",
+            "anthropic",
+            "google"
+          ],
+          "default": "openai",
+          "enumDescriptions": [
+            "Use OpenAI API",
+            "Use Anthropic (Claude) API",
+            "Use Google (Gemini) API"
+          ],
+          "description": "AI provider to use for generating commit messages"
+        },
+        "aiCommit.model": {
+          "type": "string",
+          "default": "gpt-4o-mini",
+          "description": "Model to use (e.g., gpt-4o-mini, gpt-4, claude-3-5-sonnet-20241022)"
+        },
+        "aiCommit.useConventionalCommits": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use Conventional Commits format (feat, fix, chore, etc.)"
+        },
+        "aiCommit.includeFileNames": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include file names in the AI prompt for better context"
+        },
+        "aiCommit.maxDiffLength": {
+          "type": "number",
+          "default": 10000,
+          "description": "Maximum length of diff to send to AI (characters)"
+        }
+      }
+    },
+    "menus": {
+      "scm/title": [
+        {
+          "command": "aiCommit.generate",
+          "when": "scmProvider == git",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.90.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "simple-git": "^3.24.0",
+    "axios": "^1.7.7"
+  }
+}
+

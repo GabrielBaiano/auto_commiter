@@ -1,0 +1,4 @@
+{
+  "aiCommit.provider": "google",
+  "aiCommit.model": "gemini-2.0-flash"
+}
