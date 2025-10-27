@@ -8,15 +8,15 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/yourusername/auto_commiter/issues" target="_blank">🐛 Report Bug</a>
+  <a href="https://github.com/GabrielBaiano/auto_commiter/issues" target="_blank">🐛 Report Bug</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/yourusername/auto_commiter" target="_blank">💻 GitHub</a>
+  <a href="https://github.com/GabrielBaiano/auto_commiter" target="_blank">💻 GitHub</a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/yourusername/auto_commiter?style=social" alt="GitHub stars">
-  <img src="https://img.shields.io/github/issues/yourusername/auto_commiter" alt="GitHub issues">
-  <img src="https://img.shields.io/github/license/yourusername/auto_commiter" alt="License">
+  <img src="https://img.shields.io/github/stars/GabrielBaiano/auto_commiter?style=social" alt="GitHub stars">
+  <img src="https://img.shields.io/github/issues/GabrielBaiano/auto_commiter" alt="GitHub issues">
+  <img src="https://img.shields.io/github/license/GabrielBaiano/auto_commiter" alt="License">
 </p>
 
 ---
@@ -101,7 +101,7 @@ If you want to clone the repository and run the project locally:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/auto_commiter.git
+git clone https://github.com/GabrielBaiano/auto_commiter.git
 
 # 2. Navigate to the project folder
 cd auto_commiter
@@ -136,6 +136,6 @@ This project is licensed under the MIT License.
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/yourusername" target="_blank">Gabri</a>
+  Made with ❤️ by <a href="https://github.com/GabrielBaiano" target="_blank">Gabriel Baiano</a>
 </p>
 
