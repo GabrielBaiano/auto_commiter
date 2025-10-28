@@ -92,4 +92,4 @@ You can choose from the following models in the extension's settings:
 
 ## 📄 License
 
-This project is licensed under the [LICENSE_TYPE] License.
+This project is licensed under the MIT License.
