@@ -2,7 +2,7 @@
   <img src="[LOGO_PATH]" alt="[PROJECT_NAME] Logo" width="200"/>
 </p>
 
-<h1 align="center">[PROJECT_NAME]</h1>
+<h1 align="center">Auto Committer</h1>
 
 <p align="center">
   <strong>[PROJECT_DESCRIPTION]</strong><br>
