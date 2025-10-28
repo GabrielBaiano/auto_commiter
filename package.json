@@ -1,9 +1,13 @@
 {
-  "name": "ai-commit",
+"name": "ai-commit",
   "displayName": "AI Commit Generator",
   "description": "Generate conventional commit messages with AI using OpenAI, Claude, or Gemini",
   "version": "0.1.0",
   "publisher": "gabrielbaiano",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GabrielBaiano/auto_commiter"
+  },
   "engines": {
     "vscode": "^1.90.0"
   },
