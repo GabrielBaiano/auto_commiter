@@ -1,145 +1,95 @@
 <p align="center">
-  <img src="[LOGO_PATH]" alt="[PROJECT_NAME] Logo" width="200"/>
+  <img src="[LOGO_PATH]" alt="Auto Commiter Logo" width="200"/>
 </p>
 
-<h1 align="center">[PROJECT_NAME]</h1>
+<h1 align="center">Auto Commiter (for VS Code)</h1>
 
 <p align="center">
-  <strong>[PROJECT_DESCRIPTION]</strong><br>
-  <em>[PROJECT_TAGLINE]</em>
+  <strong>A VS Code extension that uses AI to generate commit messages.</strong><br>
+  <em>Let AI write your commit messages directly in your editor.</em>
 </p>
 
 <p align="center">
   <a href="/README.pt.md" target="_blank">🇧🇷 Português</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="[RELEASES_URL]" target="_blank">📦 Downloads</a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=[PUBLISHER_NAME].auto-commiter" target="_blank">📦 VS Marketplace</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="[ISSUE_TEMPLATE_URL]" target="_blank">🐛 Report Bug</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/GabrielBaiano/auto_commiter/issues/new/choose" target="_blank">🐛 Report Bug</a>
 </p>
 
 <p align="center">
-  <a href="[GITHUB_REPO_URL]/stargazers">
-    <img src="https://img.shields.io/github/stars/[USERNAME]/[REPO_NAME]?style=social" alt="GitHub stars">
+  <a href="https://marketplace.visualstudio.com/items?itemName=[PUBLISHER_NAME].auto-commiter">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/[PUBLISHER_NAME].auto-commiter?style=social&label=VS%20Marketplace" alt="VS Marketplace Version">
   </a>
-  <a href="[GITHUB_REPO_URL]/issues">
-    <img src="https://img.shields.io/github/issues/[USERNAME]/[REPO_NAME]" alt="GitHub issues">
+  <a href="https://github.com/GabrielBaiano/auto_commiter/stargazers">
+    <img src="https://img.shields.io/github/stars/GabrielBaiano/auto_commiter?style=social" alt="GitHub stars">
   </a>
-  <a href="[GITHUB_REPO_URL]/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/[USERNAME]/[REPO_NAME]" alt="License">
+  <a href="https://github.com/GabrielBaiano/auto_commiter/issues">
+    <img src="https://img.shields.io/github/issues/GabrielBaiano/auto_commiter" alt="GitHub issues">
   </a>
-  <a href="[GITHUB_REPO_URL]/releases">
-    <img src="https://img.shields.io/github/v/release/[USERNAME]/[REPO_NAME]" alt="Latest Release">
+  <a href="https://github.com/GabrielBaiano/auto_commiter/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/GabrielBaiano/auto_commiter" alt="License">
   </a>
 </p>
 
 ---
 
 <p align="center">
-  <img src="[SHOWCASE_IMAGE_URL]" alt="[PROJECT_NAME] Showcase"/>
+  <img src="[SHOWCASE_IMAGE_URL]" alt="Auto Commiter Showcase in VS Code"/>
 </p>
 
-**[PROJECT_NAME]** [DETAILED_DESCRIPTION]
+**Auto Commiter** is a VS Code extension that analyzes your `git diff --staged` and uses generative AI (OpenAI or Google Gemini) to automatically create descriptive and accurate commit messages, integrating directly into your Source Control panel.
 
-> 📚 **Project Evolution**: [PROJECT_EVOLUTION_DESCRIPTION]
+> 📚 **Project Evolution**: This project was created to streamline the development workflow, saving time and improving the quality of commit history by leveraging the power of modern AI models inside the code editor.
 
 ## 🎓 Main Features
 
-* **[FEATURE_1]**: [FEATURE_1_DESCRIPTION]
-* **[FEATURE_2]**: [FEATURE_2_DESCRIPTION]
-* **[FEATURE_3]**: [FEATURE_3_DESCRIPTION]
-* **[FEATURE_4]**: [FEATURE_4_DESCRIPTION]
+* **AI-Powered Commits**: Automatically generates commit messages based on staged changes.
+* **Multi-Provider Support**: Choose between OpenAI (GPT), Google (Gemini) models or Claude AI.
+* **VS Code Integration**: Populates the commit message box in the Source Control panel.
+* **Command Palette**: Access functionality quickly via the VS Code Command Palette (Ctrl+Shift+P).
+
+## 🤖 How It Works & Supported Models
+
+### How It Works
+
+1.  The extension activates when you open a Git repository in VS Code.
+2.  After staging your changes (`git add .`), go to the **Source Control** panel.
+3.  Click the "Auto Commiter" icon (or run the command) to generate a message.
+4.  The extension securely sends your `git diff --staged` to your chosen AI provider (OpenAI or Gemini).
+5.  The AI analyzes the code changes and returns a suggested commit message.
+6.  The generated message is automatically placed in the commit input box, ready for you to review and commit.
+
+### Supported AI Models
+
+You can choose from the following models in the extension's settings:
+
+* **OpenAI:**
+    * `gpt-3.5-turbo`
+    * `gpt-4`
+    * `gpt-4-turbo`
+* **Google Gemini:**
+    * `gemini-1.0-pro`
+    * `gemini-1.5-pro-latest`
 
 ## 🛠️ Technologies Used
 
-* **Framework**: [FRAMEWORK]
-* **Language**: [LANGUAGE]
-* **[ADDITIONAL_TECH_1]**: [ADDITIONAL_TECH_1_DESCRIPTION]
-* **[ADDITIONAL_TECH_2]**: [ADDITIONAL_TECH_2_DESCRIPTION]
-* **[ADDITIONAL_TECH_3]**: [ADDITIONAL_TECH_3_DESCRIPTION]
-* **Libraries**: [LIBRARIES_LIST]
+* **Environment**: Visual Studio Code
+* **Language**: TypeScript (or JavaScript)
+* **API**: VS Code Extension API
+* **AI Integration**: OpenAI API, Google Gemini API
 
 ## 🚀 Quick Start
 
 ### 📥 Installation
 
-1. **Download**: Go to the **[Releases page]([RELEASES_URL])** and download the latest version for your OS
-2. **Install**: [INSTALLATION_INSTRUCTIONS]
-3. **[SETUP_STEP_1]**: [SETUP_STEP_1_DESCRIPTION]
-4. **[SETUP_STEP_2]**: [SETUP_STEP_2_DESCRIPTION]
+1.  Open **Visual Studio Code**.
+2.  Go to the **Extensions** view (or press `Ctrl+Shift+X`).
+3.  Search for "**Auto Commiter**".
+4.  Click **Install**.
 
-### ⚡ First Steps
-
-- **[FIRST_STEP_1]**: [FIRST_STEP_1_DESCRIPTION]
-- **[FIRST_STEP_2]**: [FIRST_STEP_2_DESCRIPTION]
-- **[FIRST_STEP_3]**: [FIRST_STEP_3_DESCRIPTION]
-- **[FIRST_STEP_4]**: [FIRST_STEP_4_DESCRIPTION]
-
-## 🌐 [CUSTOMIZATION_SECTION_TITLE]
-
-[PROJECT_NAME] allows you to [CUSTOMIZATION_DESCRIPTION]:
-
-### Method 1: [METHOD_1_TITLE]
-
-1. [METHOD_1_STEP_1]
-2. [METHOD_1_STEP_2]
-3. [METHOD_1_STEP_3]
-4. [METHOD_1_STEP_4]
-5. [METHOD_1_STEP_5]
-6. [METHOD_1_STEP_6]
-
-### Method 2: [METHOD_2_TITLE]
-
-1. [METHOD_2_STEP_1]
-2. [METHOD_2_STEP_2]
-3. [METHOD_2_STEP_3]
-4. [METHOD_2_STEP_4]
-
-### Supported [CUSTOMIZATION_TYPE]:
-- [SUPPORTED_TYPE_1]
-- [SUPPORTED_TYPE_2]
-- [SUPPORTED_TYPE_3]
-- [SUPPORTED_TYPE_4]
-- [SUPPORTED_TYPE_5]
-
-## 💻 For Developers
-
-If you want to clone the repository and run the project locally:
-
-```bash
-# 1. Clone the repository
-git clone [GITHUB_REPO_URL].git
-
-# 2. Navigate to the project folder
-cd [REPO_NAME]
-
-# 3. Install dependencies
-npm install
-
-# 4. Run in development mode
-npm start
-
-# 5. To create installers
-npm run package
-```
-
-## 📚 Perfect for [TARGET_AUDIENCE]
-
-- **[USE_CASE_1]**: [USE_CASE_1_DESCRIPTION]
-- **[USE_CASE_2]**: [USE_CASE_2_DESCRIPTION]
-- **[USE_CASE_3]**: [USE_CASE_3_DESCRIPTION]
-- **[USE_CASE_4]**: [USE_CASE_4_DESCRIPTION]
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+*Alternatively, launch VS Code Quick Open (`Ctrl+P`), paste the following command, and press enter:*
 
 ## 📄 License
 
 This project is licensed under the [LICENSE_TYPE] License.
-
----
-
-<p align="center">
-  Made with ❤️ by <a href="[GITHUB_PROFILE_URL]" target="_blank">[AUTHOR_NAME]</a>
-</p>
