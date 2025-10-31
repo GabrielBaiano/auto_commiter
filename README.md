@@ -2,7 +2,7 @@
   <!-- <img src="[LOGO_PATH]" alt="Auto Commiter Logo" width="200"/> -->
 </p>
 
-<h1 align="center">Auto Commiter (for VS Code)</h1>
+<h1 align="center">AI Simple Commiter (for VS Code)</h1>
 
 <p align="center">
   <strong>A VS Code extension that uses AI to generate commit messages.</strong><br>
@@ -65,24 +65,6 @@
 5.  The AI analyzes the code changes and returns a suggested commit message.
 6.  The generated message is automatically placed in the commit input box, ready for you to review and commit.
 
-## Commands & Usage
-
-- **Status Bar Button**: Click the "AI Commit" button on the VS Code status bar to generate a message.
-- **Command Palette**:
-  - "AI Commit: Generate Commit Message with AI" (`aiCommit.generate`)
-  - "AI Commit: Configure AI Commit" (`aiCommit.configure`) — set provider, API key, and model
-
-## Commit Message Language
-
-- Go to Settings → search for "AI Commit" → set **Language**.
-- Supported values: `pt`, `en`, `es`, `fr`, `de`, `it` (default: `pt`).
-- Alternatively, set in `settings.json`:
-  ```json
-  {
-    "aiCommit.language": "en"
-  }
-  ```
-
 ### Supported AI Models
 
 You can choose from the following models in the extension's settings:
@@ -118,6 +100,24 @@ You can choose from the following models in the extension's settings:
 4.  Click **Install**.
 
 *Alternatively, launch VS Code Quick Open (`Ctrl+P`), paste the following command, and press enter:*
+
+## 🧭 Commands & Usage
+
+- **Status Bar Button**: Click the "AI Commit" button on the VS Code status bar to generate a message.
+- **Command Palette**:
+  - "AI Commit: Generate Commit Message with AI" (`aiCommit.generate`)
+  - "AI Commit: Configure AI Commit" (`aiCommit.configure`) — set provider, API key, and model
+
+## 🌐 Commit Message Language
+
+- Go to Settings → search for "AI Commit" → set **Language**.
+- Supported values: `pt`, `en`, `es`, `fr`, `de`, `it` (default: `pt`).
+- Alternatively, set in `settings.json`:
+  ```json
+  {
+    "aiCommit.language": "en"
+  }
+  ```
 
 ## 📄 License
 
