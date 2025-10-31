@@ -12,14 +12,19 @@
 <p align="center">
   <a href="/README.md" target="_blank">🇺🇸 English</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://marketplace.visualstudio.com/items?itemName=[PUBLISHER_NAME].auto-commiter" target="_blank">📦 VS Marketplace</a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=gabrielbaiano.auto-commiter" target="_blank">📦 VS Marketplace</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://open-vsx.org/extension/gabrielbaiano/ai-commit" target="_blank">🧰 Open VSX</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/GabrielBaiano/auto_commiter/issues/new/choose" target="_blank">🐛 Reportar Bug</a>
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=[PUBLISHER_NAME].auto-commiter">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/[PUBLISHER_NAME].auto-commiter?style=social&label=VS%20Marketplace" alt="Versão no VS Marketplace">
+  <a href="https://marketplace.visualstudio.com/items?itemName=gabrielbaiano.auto-commiter">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/gabrielbaiano.auto-commiter?style=social&label=VS%20Marketplace" alt="Versão no VS Marketplace">
+  </a>
+  <a href="https://open-vsx.org/extension/gabrielbaiano/ai-commit">
+    <img src="https://img.shields.io/open-vsx/v/gabrielbaiano/ai-commit?label=Open%20VSX&style=social" alt="Versão no Open VSX">
   </a>
   <a href="https://github.com/GabrielBaiano/auto_commiter/stargazers">
     <img src="https://img.shields.io/github/stars/GabrielBaiano/auto_commiter?style=social" alt="Estrelas no GitHub">
