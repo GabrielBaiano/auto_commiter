@@ -101,6 +101,24 @@ Você pode escolher entre os seguintes modelos nas configurações da extensão:
 
 *Como alternativa, abra o Quick Open do VS Code (`Ctrl+P`), cole o comando abaixo e pressione Enter:*
 
+## 🧭 Comandos e Uso
+
+- **Botão na Barra de Status**: Clique no botão "AI Commit" na barra inferior do VS Code para gerar a mensagem.
+- **Paleta de Comandos**:
+  - "AI Commit: Generate Commit Message with AI" (`aiCommit.generate`)
+  - "AI Commit: Configure AI Commit" (`aiCommit.configure`) — define provedor, chave de API e modelo
+
+## 🌐 Idioma das Mensagens de Commit
+
+- Vá em Configurações → pesquise por "AI Commit" → defina **Language**.
+- Valores suportados: `pt`, `en`, `es`, `fr`, `de`, `it` (padrão: `pt`).
+- Alternativamente, no `settings.json`:
+  ```json
+  {
+    "aiCommit.language": "en"
+  }
+  ```
+
 ## 📄 Licença
 
 Este projeto é licenciado sob a Licença MIT.
