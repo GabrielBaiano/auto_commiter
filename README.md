@@ -82,6 +82,7 @@ You can choose from the following models in the extension's settings:
 * **Google Gemini:**
     * `gemini-1.0-pro`
     * `gemini-1.5-pro-latest`
+    * `gemini-2.0-flash`
 
 ## 🛠️ Technologies Used
 
