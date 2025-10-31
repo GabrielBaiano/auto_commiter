@@ -25,7 +25,9 @@
     "conventional-commits"
   ],
   "activationEvents": [
-    "onCommand:aiCommit.generate"
+    "onCommand:aiCommit.generate",
+    "onCommand:aiCommit.configure",
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {

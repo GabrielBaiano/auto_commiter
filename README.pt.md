@@ -1,142 +1,101 @@
 <p align="center">
-  <img src="[LOGO_PATH]" alt="Logo do [PROJECT_NAME]" width="200"/>
+  <!-- <img src="[LOGO_PATH]" alt="Logo do Auto Commiter" width="200"/> -->
 </p>
 
-<h1 align="center">[PROJECT_NAME]</h1>
+<h1 align="center">Auto Commiter (para VS Code)</h1>
 
 <p align="center">
-  <strong>[PROJECT_DESCRIPTION]</strong><br>
-  <em>[PROJECT_TAGLINE]</em>
+  <strong>Uma extensão do VS Code que usa IA para gerar mensagens de commit.</strong><br>
+  <em>Deixe a IA escrever suas mensagens de commit direto no editor.</em>
 </p>
 
 <p align="center">
   <a href="/README.md" target="_blank">🇺🇸 English</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="[RELEASES_URL]" target="_blank">📦 Downloads</a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=[PUBLISHER_NAME].auto-commiter" target="_blank">📦 VS Marketplace</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="[ORIGINAL_VERSION_URL]" target="_blank">📚 Versão Original</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="[ISSUE_TEMPLATE_URL]" target="_blank">🐛 Reportar Bug</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="[LINKEDIN_URL]" target="_blank">💼 LinkedIn</a>
+  <a href="https://github.com/GabrielBaiano/auto_commiter/issues/new/choose" target="_blank">🐛 Reportar Bug</a>
 </p>
 
 <p align="center">
-  <a href="[GITHUB_REPO_URL]/stargazers">
-    <img src="https://img.shields.io/github/stars/[USERNAME]/[REPO_NAME]?style=social" alt="GitHub stars">
+  <a href="https://marketplace.visualstudio.com/items?itemName=[PUBLISHER_NAME].auto-commiter">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/[PUBLISHER_NAME].auto-commiter?style=social&label=VS%20Marketplace" alt="Versão no VS Marketplace">
   </a>
-  <a href="[GITHUB_REPO_URL]/issues">
-    <img src="https://img.shields.io/github/issues/[USERNAME]/[REPO_NAME]" alt="GitHub issues">
+  <a href="https://github.com/GabrielBaiano/auto_commiter/stargazers">
+    <img src="https://img.shields.io/github/stars/GabrielBaiano/auto_commiter?style=social" alt="Estrelas no GitHub">
   </a>
-  <a href="[GITHUB_REPO_URL]/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/[USERNAME]/[REPO_NAME]" alt="License">
+  <a href="https://github.com/GabrielBaiano/auto_commiter/issues">
+    <img src="https://img.shields.io/github/issues/GabrielBaiano/auto_commiter" alt="Issues no GitHub">
   </a>
-  <a href="[GITHUB_REPO_URL]/releases">
-    <img src="https://img.shields.io/github/v/release/[USERNAME]/[REPO_NAME]" alt="Latest Release">
+  <a href="https://github.com/GabrielBaiano/auto_commiter/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/GabrielBaiano/auto_commiter" alt="Licença">
   </a>
 </p>
 
 ---
 
-<p align="center">
-  <img src="[SHOWCASE_IMAGE_URL]" alt="Demonstração do [PROJECT_NAME]"/>
-</p>
+<!-- <p align="center">
+  <img src="[SHOWCASE_IMAGE_URL]" alt="Demonstração do Auto Commiter no VS Code"/>
+</p> -->
 
-**[PROJECT_NAME]** [DETAILED_DESCRIPTION_PT]
+**Auto Commiter** é uma extensão do VS Code que analisa seu `git diff --staged` e usa IA generativa (OpenAI, Claude ou Google Gemini) para criar automaticamente mensagens de commit descritivas e precisas, integrando-se diretamente ao painel de Controle de Código-Fonte.
 
-> 📚 **Evolução do Projeto**: [PROJECT_EVOLUTION_DESCRIPTION_PT]
+> 📚 **Evolução do Projeto**: Este projeto foi criado para agilizar o fluxo de desenvolvimento, economizando tempo e melhorando a qualidade do histórico de commits ao aproveitar o poder de modelos modernos de IA dentro do editor de código.
 
 ## 🎓 Funcionalidades Principais
 
-* **[FEATURE_1]**: [FEATURE_1_DESCRIPTION_PT]
-* **[FEATURE_2]**: [FEATURE_2_DESCRIPTION_PT]
-* **[FEATURE_3]**: [FEATURE_3_DESCRIPTION_PT]
-* **[FEATURE_4]**: [FEATURE_4_DESCRIPTION_PT]
+- **Commits com IA**: Gera automaticamente mensagens de commit com base nas alterações preparadas (staged).
+- **Suporte a múltiplos provedores**: Escolha entre modelos da OpenAI (GPT), Google (Gemini) ou Claude AI.
+- **Integração com VS Code**: Preenche a caixa de mensagem de commit no painel de Controle de Código-Fonte.
+- **Paleta de Comandos**: Acesse rapidamente via a Paleta de Comandos do VS Code (Ctrl+Shift+P).
+
+## 🤖 Como Funciona e Modelos Suportados
+
+### Como Funciona
+
+1. A extensão é ativada quando você abre um repositório Git no VS Code.
+2. Após preparar suas alterações (`git add .`), vá ao painel **Controle de Código-Fonte**.
+3. Clique no ícone "Auto Commiter" (ou execute o comando) para gerar uma mensagem.
+4. A extensão envia com segurança seu `git diff --staged` para o provedor de IA escolhido (OpenAI, Claude ou Gemini).
+5. A IA analisa as mudanças no código e retorna uma sugestão de mensagem de commit.
+6. A mensagem gerada é colocada automaticamente na caixa de entrada do commit, pronta para você revisar e confirmar.
+
+### Modelos de IA Suportados
+
+Você pode escolher entre os seguintes modelos nas configurações da extensão:
+
+- **OpenAI:**
+    - `gpt-3.5-turbo`
+    - `gpt-4`
+    - `gpt-4-turbo`
+- **Anthropic Claude:**
+    - `claude-3-5-sonnet-20241022`
+    - `claude-3-5-haiku-20241022`
+    - `claude-3-opus-20240229`
+    - `claude-3-sonnet-20240229`
+    - `claude-3-haiku-20240307`
+- **Google Gemini:**
+    - `gemini-1.0-pro`
+    - `gemini-1.5-pro-latest`
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Framework**: [FRAMEWORK]
-* **Linguagem**: [LANGUAGE]
-* **[ADDITIONAL_TECH_1]**: [ADDITIONAL_TECH_1_DESCRIPTION_PT]
-* **[ADDITIONAL_TECH_2]**: [ADDITIONAL_TECH_2_DESCRIPTION_PT]
-* **[ADDITIONAL_TECH_3]**: [ADDITIONAL_TECH_3_DESCRIPTION_PT]
-* **Bibliotecas**: [LIBRARIES_LIST_PT]
+- **Ambiente**: Visual Studio Code
+- **Linguagem**: TypeScript (ou JavaScript)
+- **API**: VS Code Extension API
+- **Integração com IA**: OpenAI API, Google Gemini API
 
-## 📖 Como Usar e Instalar
+## 🚀 Início Rápido
 
-A instalação é simples e direta.
+### 📥 Instalação
 
-1. Acesse a **[Página de Releases aqui]([RELEASES_URL])**.
-2. Baixe o instalador mais recente para o seu sistema operacional (ex: `[PROJECT_NAME]-Setup-X.X.X.exe` para Windows).
-3. Execute o instalador.
-   * **Observação para Windows:** O SmartScreen pode exibir um aviso de "Editor Desconhecido". Isso é normal. Clique em "Mais informações" e depois em "Executar assim mesmo".
-4. [SETUP_STEP_1_PT]: [SETUP_STEP_1_DESCRIPTION_PT]
+1. Abra o **Visual Studio Code**.
+2. Vá até a visão de **Extensões** (ou pressione `Ctrl+Shift+X`).
+3. Pesquise por "**Auto Commiter**".
+4. Clique em **Instalar**.
 
-## 🌐 [CUSTOMIZATION_SECTION_TITLE_PT]
-
-O [PROJECT_NAME] permite que você [CUSTOMIZATION_DESCRIPTION_PT]:
-
-### Método 1: [METHOD_1_TITLE_PT]
-
-1. [METHOD_1_STEP_1_PT]
-2. [METHOD_1_STEP_2_PT]
-3. [METHOD_1_STEP_3_PT]
-4. [METHOD_1_STEP_4_PT]
-5. [METHOD_1_STEP_5_PT]
-6. [METHOD_1_STEP_6_PT]
-
-### Método 2: [METHOD_2_TITLE_PT]
-
-1. [METHOD_2_STEP_1_PT]
-2. [METHOD_2_STEP_2_PT]
-3. [METHOD_2_STEP_3_PT]
-4. [METHOD_2_STEP_4_PT]
-
-### Tipos de [CUSTOMIZATION_TYPE_PT] Suportados:
-- [SUPPORTED_TYPE_1_PT]
-- [SUPPORTED_TYPE_2_PT]
-- [SUPPORTED_TYPE_3_PT]
-- [SUPPORTED_TYPE_4_PT]
-- [SUPPORTED_TYPE_5_PT]
-
-## 💻 Para Desenvolvedores
-
-Se você deseja clonar o repositório e rodar o projeto localmente:
-
-```bash
-# 1. Clone o repositório
-git clone [GITHUB_REPO_URL].git
-
-# 2. Navegue até a pasta do projeto
-cd [REPO_NAME]
-
-# 3. Instale as dependências
-npm install
-
-# 4. Rode em modo de desenvolvimento
-npm start
-
-# 5. Para criar os instaladores
-npm run package
-```
-
-## 📚 Perfeito para [TARGET_AUDIENCE_PT]
-
-- **[USE_CASE_1_PT]**: [USE_CASE_1_DESCRIPTION_PT]
-- **[USE_CASE_2_PT]**: [USE_CASE_2_DESCRIPTION_PT]
-- **[USE_CASE_3_PT]**: [USE_CASE_3_DESCRIPTION_PT]
-- **[USE_CASE_4_PT]**: [USE_CASE_4_DESCRIPTION_PT]
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para enviar um Pull Request.
+*Como alternativa, abra o Quick Open do VS Code (`Ctrl+P`), cole o comando abaixo e pressione Enter:*
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a Licença [LICENSE_TYPE].
-
----
-
-<p align="center">
-  Feito com ❤️ por <a href="[GITHUB_PROFILE_URL]" target="_blank">[AUTHOR_NAME]</a>
-</p>
+Este projeto é licenciado sob a Licença MIT.

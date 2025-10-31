@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="[LOGO_PATH]" alt="Auto Commiter Logo" width="200"/>
+  <!-- <img src="[LOGO_PATH]" alt="Auto Commiter Logo" width="200"/> -->
 </p>
 
 <h1 align="center">Auto Commiter (for VS Code)</h1>
@@ -34,9 +34,9 @@
 
 ---
 
-<p align="center">
+<!-- <p align="center">
   <img src="[SHOWCASE_IMAGE_URL]" alt="Auto Commiter Showcase in VS Code"/>
-</p>
+</p> -->
 
 **Auto Commiter** is a VS Code extension that analyzes your `git diff --staged` and uses generative AI (OpenAI or Google Gemini) to automatically create descriptive and accurate commit messages, integrating directly into your Source Control panel.
 
@@ -56,7 +56,7 @@
 1.  The extension activates when you open a Git repository in VS Code.
 2.  After staging your changes (`git add .`), go to the **Source Control** panel.
 3.  Click the "Auto Commiter" icon (or run the command) to generate a message.
-4.  The extension securely sends your `git diff --staged` to your chosen AI provider (OpenAI or Gemini).
+4.  The extension securely sends your `git diff --staged` to your chosen AI provider (OpenAI, Claude, or Gemini).
 5.  The AI analyzes the code changes and returns a suggested commit message.
 6.  The generated message is automatically placed in the commit input box, ready for you to review and commit.
 
@@ -68,6 +68,12 @@ You can choose from the following models in the extension's settings:
     * `gpt-3.5-turbo`
     * `gpt-4`
     * `gpt-4-turbo`
+* **Anthropic Claude:**
+    * `claude-3-5-sonnet-20241022`
+    * `claude-3-5-haiku-20241022`
+    * `claude-3-opus-20240229`
+    * `claude-3-sonnet-20240229`
+    * `claude-3-haiku-20240307`
 * **Google Gemini:**
     * `gemini-1.0-pro`
     * `gemini-1.5-pro-latest`

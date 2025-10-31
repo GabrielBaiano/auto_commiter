@@ -21,7 +21,14 @@ export function activate(context: vscode.ExtensionContext) {
     await handleConfigureCommand();
   });
 
-  context.subscriptions.push(generateCommand, configureCommand, outputChannel);
+  // Create status bar button
+  const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 100);
+  statusBarItem.text = '$(git-commit) AI Commit';
+  statusBarItem.tooltip = 'Generate commit message with AI';
+  statusBarItem.command = 'aiCommit.generate';
+  statusBarItem.show();
+
+  context.subscriptions.push(generateCommand, configureCommand, statusBarItem, outputChannel);
 }
 
 async function handleConfigureCommand() {
