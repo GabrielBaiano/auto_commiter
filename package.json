@@ -1,5 +1,5 @@
 {
-"name": "ai-commit",
+"name": "auto-commiter",
   "displayName": "AI Commit Generator",
   "description": "Generate conventional commit messages with AI using OpenAI, Claude, or Gemini",
   "version": "0.1.0",
